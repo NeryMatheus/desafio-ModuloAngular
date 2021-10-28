@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="toolbarFixed">
+    <mat-toolbar-row>
+    <span>Cardápio</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>        
+        <mat-icon  [matBadge]="getQtdTotal()" matBadgeColor="accent">shopping_cart</mat-icon>
+        <span style="flex: 1"></span>
+        <a mat-button routerLink="/pedido">Ver Pedido</a> <!-- Botão para ver o pedido com a listagem dos itens atraves do routerLink -->
+        <span style="flex: 1"></span>
+        <span>{{getValorTotal() | currency: "BRL"}}</span> <!-- Exibe o valor Total dos pedidos sendo adicionados -->        
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-action-list>
+    <ng-container *ngFor="let card of cardapio; let i = index"> <!-- Lista os produtos -->
+        <h2 *ngIf="i === 0 || card.categoria !== cardapio[i-1].categoria">{{card.categoria}}</h2> <!-- Exibe apena 1 vez a categoria dos produtos -->
+        <button mat-list-item (click)="addItem(card)"> <!-- Botão para adicionr item ao carrinho -->
+            <span>{{card.descricao}}</span>
+            <span style="flex: 1"></span>
+            <span>{{card.preco | currency: "BRL"}}</span> <!-- Pipe -->
+        </button>
+    </ng-container>
+</mat-action-list>
