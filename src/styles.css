@@ -2,11 +2,3 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-h2{
-    padding: 8px;
-}
-
-.mat-h2, .mat-title, .mat-typography h2 {
-    margin: 0;
-}

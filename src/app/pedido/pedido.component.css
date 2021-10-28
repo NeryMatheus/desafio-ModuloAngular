@@ -1,0 +1,34 @@
+h2{
+    padding: 8px;
+    color: #F05981;
+}
+
+.pedidos{
+    background-color: white;
+}
+.pedidos:nth-child(even){
+    background-color: rgba(245, 245, 245, 0.281);
+}
+
+/* Estilo do "Total R$ 0.00" */
+.totPedido{
+    border-top: 1px solid #3f51b591;
+    box-shadow: -2px -2px 2.5px #3f51b591;
+    background-color: rgba(245, 245, 245, 0.678);
+    margin-top: 16px;
+    border-collapse: collapse;
+}
+
+/* Estilo do "Seus Pedidos" */
+mat-list > h3{
+    text-align: center;
+    padding: 8px;
+    margin-top: 0;
+    border-bottom: 1px solid #3f51b591;
+    box-shadow: 2px 4px 2.5px #3f51b591;
+    background-color: rgba(245, 245, 245, 0.678);
+}
+
+.mat-list-base{
+    padding-top: 0;
+}
